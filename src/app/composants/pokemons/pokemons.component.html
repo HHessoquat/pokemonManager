@@ -1,0 +1,6 @@
+<div *ngIf="pokemons$ | async as pokemons" class="pokemonContainer">
+
+  <app-pokemon-card *ngFor="let pokemon of pokemons.results" [url]="pokemon.url"></app-pokemon-card>
+
+</div>
+

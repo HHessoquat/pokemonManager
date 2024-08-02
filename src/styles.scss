@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+h1 {
+  @apply text-center p-8 font-bold text-3xl
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}

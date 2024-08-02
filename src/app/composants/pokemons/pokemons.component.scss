@@ -1,0 +1,6 @@
+.pokemonContainer{
+  @apply flex flex-row flex-wrap gap-2 justify-center items-center;
+}
+app-pokemon-card{
+  width: 20%;
+}

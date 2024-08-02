@@ -1,0 +1,8 @@
+<div *ngIf="pokemon$ |async as pokemon" class="pokemonCard">
+  <img [src]="pokemon.sprites.front_default">
+  <div>
+    <h3>{{pokemon.name}}</h3>
+    <p class="pokeInfo">{{pokemon.size}}</p>
+    <p class="pokeInfo">poids : {{pokemon.weight}}</p>
+  </div>
+</div>

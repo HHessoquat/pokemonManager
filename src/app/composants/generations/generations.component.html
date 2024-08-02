@@ -1,1 +1,13 @@
-<p>generations works!</p>
+<div>
+  <h1>Generation de Pokemon</h1>
+</div>
+<div>
+  <h2>Les générations de Pokemon</h2>
+  <ul *ngIf="generations$ | async as generations">
+    <li class="generationListElement" *ngFor="let g of generations.results
+">
+      <a class="generationLink" >{{g.name.toLocaleUpperCase()}}</a>
+    </li>
+  </ul>
+
+</div>
