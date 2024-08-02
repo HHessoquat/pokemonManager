@@ -14,7 +14,7 @@ export class PokemonCardComponent implements OnInit {
   constructor(@Inject(PokeApiService) private api: PokeApiService) { }
 
   ngOnInit(): void {
-    this.pokemon$ = this.api.getPokemon(this.url);
+    this.pokemon$ = this.api.getPokemonbyUrl(this.url);
     this.pokemon$?.forEach(value => console.log(value));
   }
 
