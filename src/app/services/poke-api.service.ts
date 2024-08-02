@@ -20,7 +20,10 @@ export class PokeApiService {
   getPokemons():Observable<PokemonList> | undefined {
     return this.http.get<PokemonList>(`${this.baseUrl}/pokemon`);
   }
-  getPokemon(url:string):Observable<Pokemon> | undefined {
+  getPokemonbyUrl(url:string):Observable<Pokemon> | undefined {
     return this.http.get<Pokemon>(url);
+  }
+  getPokemonById(id:number):Observable<Pokemon> | undefined {
+    return this.http.get<Pokemon>(`${this.baseUrl}/pokemon/${id}`);
   }
 }

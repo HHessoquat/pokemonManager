@@ -5,7 +5,7 @@ export interface Pokemon {
   name: string;
   category: string;
   type:String;
-  size: number;
+  height: number;
   weight: number;
   sprites: Images;
 }
