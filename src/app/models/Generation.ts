@@ -1,7 +1,7 @@
 export interface Generation {
   results: Array<{
-    name:String,
-    url:String;
+    name:string,
+    url:string;
   }>
 
 }

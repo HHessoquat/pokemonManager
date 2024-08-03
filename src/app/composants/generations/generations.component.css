@@ -1,0 +1,16 @@
+h2 {
+  @apply text-center text-2xl pb-2 font-bold;
+}
+
+.generationListElement {
+  @apply text-gray-300 mb-2;
+}
+
+.generationButton {
+  @apply w-full py-2 font-bold;
+  background-color: #8a2020;
+  background-image: linear-gradient(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0) 50%, hsla(0, 0%, 0%, 0.3) 50%, hsla(0, 0%, 100%, 0.2));
+  text-shadow: #000000 7px 7px 6px;
+}
+
+/*# sourceMappingURL=generations.component.css.map */

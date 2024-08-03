@@ -1,9 +1,10 @@
 import {Inject, Injectable} from '@angular/core';
-import {Observable} from "rxjs";
+import {map, Observable, take} from "rxjs";
 import {Pokemon} from "../models/Pokemon";
 import {HttpClient} from "@angular/common/http";
 import {Generation} from "../models/Generation";
 import {PokemonList} from "../models/PokemonList";
+import {PokemonUrl} from "../models/PokemonUrl";
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,21 @@ export class PokeApiService {
   getGeneration():Observable<Generation> | undefined {
     return this.http.get<Generation>(`${this.baseUrl}/generation`);
   }
-
+  getPokemonsByGenerationUrl(url: string): Observable<PokemonList> | undefined {
+    const generation = this.http.get<any>(url);
+    return generation.pipe(
+      map(g => {
+        return {
+          results :  g.pokemon_species.map((urlObject: PokemonUrl) => {
+            return {
+              name: urlObject.name,
+              url: urlObject.url.replace(/-species/g, '')
+            };
+          })
+        };
+      })
+    );
+  }
   getPokemons():Observable<PokemonList> | undefined {
     return this.http.get<PokemonList>(`${this.baseUrl}/pokemon`);
   }

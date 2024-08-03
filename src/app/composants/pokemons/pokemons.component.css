@@ -1,0 +1,9 @@
+.pokemonContainer {
+  @apply flex flex-row flex-wrap gap-2 justify-center items-center mt-2;
+}
+
+app-pokemon-card {
+  width: 20%;
+}
+
+/*# sourceMappingURL=pokemons.component.css.map */

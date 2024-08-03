@@ -4,9 +4,13 @@
 <div>
   <h2>Les générations de Pokemon</h2>
   <ul *ngIf="generations$ | async as generations">
-    <li class="generationListElement" *ngFor="let g of generations.results
-">
-      <a class="generationLink" >{{g.name.toLocaleUpperCase()}}</a>
+    <li class="generationListElement" *ngFor="let g of generations.results; let i = index">
+      <button class="generationButton" (click)="getPokemons(g.url, i+1)" >{{g.name.toLocaleUpperCase()}}</button>
+      <ng-container *ngIf="pokemons$">
+        <ng-container *ngIf="printedGeneration && printedGeneration === i+1">
+          <app-pokemons [pokemons$]="pokemons$"></app-pokemons>
+        </ng-container>
+      </ng-container>
     </li>
   </ul>
 

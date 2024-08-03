@@ -1,6 +1,5 @@
+import {PokemonUrl} from "./PokemonUrl";
+
 export interface PokemonList {
-  results:Array<{
-    name:string,
-    url:string,
-  }>
+  results:PokemonUrl[]
 }

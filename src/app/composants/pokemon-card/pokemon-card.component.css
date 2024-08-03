@@ -1,0 +1,28 @@
+.pokemonCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #000000;
+  background-image: linear-gradient(hsla(180, 60%, 90%, 0.6), hsla(180, 60%, 90%, 0) 80%, hsla(180, 30%, 0%, 0.3) 80%, hsla(180, 30%, 80%, 0.2));
+}
+
+.pokemonDataContainer {
+  background-color: #1B1B1B;
+}
+
+h3 {
+  @apply py-1.5;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: #000 4px 3px 5px;
+  background-color: #0081DF;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6901960784), rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6901960784) 100%);
+}
+
+.pokeInfo {
+  text-align: center;
+}
+
+/*# sourceMappingURL=pokemon-card.component.css.map */
