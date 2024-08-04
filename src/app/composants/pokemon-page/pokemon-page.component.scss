@@ -1,0 +1,46 @@
+.pokemonContainer{
+    @apply flex flex-col items-center;
+    .imgContainner{
+        width: 100%;
+        background-color: #FFF;
+        background-image: linear-gradient(
+        #1B1B1B30, #FFFFFF50 30%, #FFFFFF50 60%, #1B1B1BFF
+        );
+        box-shadow:
+            inset 0 -5px 20px hsla(0, 0%, 0%, 0.4), /* top light */
+    }
+    h1{
+        margin: 0.8em 0;
+        padding:0;
+    }
+    .typesWrapper{
+        @apply flex justify-center gap-2;
+        .type {
+            font-size: 1em;
+            line-height: 0;
+            border: solid 2px white;
+            border-radius: 8px;
+            padding: 1.1em 12px;
+        }
+    }
+    .pokeInfo{
+        text-align: center;
+    }
+}
+
+.dimensionSection{
+    @apply flex flex-wrap
+}
+
+.dimensionIcon {
+    width: 24px;
+}
+
+
+@media screen AND (min-width: 1200px) {
+    .pokemonContainer{
+        .imgContainner{
+            width: 30vw;
+        }
+    }
+}

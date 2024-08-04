@@ -1,1 +1,23 @@
-<p>pokemon-page works!</p>
+<main *ngIf="specie$ | async as specie">
+    <div *ngIf="pokemon$ | async as pokemon" class="pokemonContainer">
+        <figure class="imgContainner" [ngClass]="pokemon.types[0].type.name">
+            <img class="pokimage" src='{{pokemon.sprites.front_default}}' alt="{{pokemon.name}} de face">
+        </figure>
+        <div class="pokemonData">
+            <h1>{{pokemon.name}}</h1>
+            <div class="typesWrapper">
+                <p class="type" *ngFor="let type of pokemon.types">{{ type.type.name }}</p>
+            </div>
+            <div class="dimension">
+                <div class="dimensionSection">
+                    <img class="dimensionIcon" src="./assets/img/icons/height.png" alt="icone taille">
+                    <p>{{pokemon.height}}</p>
+                </div>
+                <div class="dimensionSection">
+                    <img class="dimensionIcon"  src="./assets/img/icons/weight.png" alt="icone poids">
+                    <p>{{ pokemon.weight }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

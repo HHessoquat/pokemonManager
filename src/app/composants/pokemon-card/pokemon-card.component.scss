@@ -4,13 +4,17 @@
     justify-content: center;
     border-radius: 4px;
     background-color: #000000;
-    background-image: linear-gradient(
-            hsla(180, 60%, 90%, 0.6), hsla(180, 60%, 90%, 0) 80%,
-            hsla(180, 30%, 0%, 0.3) 80%, hsla(180, 30%, 80%, 0.2)
-    );
+
 }
+
 .pokemonDataContainer {
     background-color: #1B1B1B;
+}
+.imgContainer{
+    background-image: linear-gradient(
+            hsla(180, 60%, 90%, 0.6), hsla(180, 60%, 90%, 0) 60%,
+            hsla(180, 30%, 20%, 0.3) 80%, hsla(180, 30%, 0%, 0.2)
+    );
 }
 h3 {
     @apply py-1.5;
@@ -23,6 +27,33 @@ h3 {
         #000000B0, #00000000 40%, #00000000 50%, #000000B0 100%
     );
 }
-.pokeInfo{
-    text-align: center;
+
+.grass{
+    background-color: #102A15;
 }
+.fighting{
+    background-color: #3A3210;
+}
+.flying{
+    background-color: #60CCFF;
+}
+.fire{
+    background-color: #FF9020;
+}
+.water{
+    background-color: #001A3C;
+}
+.bug{
+    background-color: #AAFFBC;
+}
+.poison{
+    background-color: #402A40;
+}
+.ground{
+    background-color: #452A00;
+}
+.rock {
+    background-color: #502300;
+}
+
+

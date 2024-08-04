@@ -5,6 +5,7 @@ import {HttpClient} from "@angular/common/http";
 import {Generation} from "../models/Generation";
 import {PokemonList} from "../models/PokemonList";
 import {PokemonUrl} from "../models/PokemonUrl";
+import {Specie} from "../models/Specie";
 
 @Injectable({
   providedIn: 'root'
@@ -40,5 +41,9 @@ export class PokeApiService {
   }
   getPokemonById(id:number):Observable<Pokemon> | undefined {
     return this.http.get<Pokemon>(`${this.baseUrl}/pokemon/${id}`);
+  }
+
+  getSpeciesById(id:number):Observable<Specie> | undefined {
+      return this.http.get<Specie>(`${this.baseUrl}/pokemon-species/${id}`);
   }
 }
