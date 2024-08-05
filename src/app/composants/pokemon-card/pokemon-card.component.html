@@ -1,10 +1,10 @@
 <article *ngIf="pokemon$ |async as pokemon" class="pokemonCard">
     <a [routerLink]="['pokemon/',pokemon.id]">
-        <figure class="imgContainer" [ngClass]="pokemon.types[0].type.name">
+        <figure class="imgContainer" >
             <img [src]="pokemon.sprites.front_default" alt="{{pokemon.name}}">
         </figure>
         <div class="pokemonDataContainer">
-            <h3>{{ pokemon.name }}</h3>
+            <h3 [ngClass]="pokemon.types[0].type.name">{{ pokemon.name }}</h3>
             <p class="pokeInfo">taille : {{ pokemon.height }}</p>
             <p class="pokeInfo">poids : {{ pokemon.weight }}</p>
         </div>
